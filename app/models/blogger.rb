@@ -13,8 +13,9 @@ class Blogger < ApplicationRecord
     self.posts.max_by{|post|post.likes}
   end
 
-  # def top_destinations
-  #   self.destinations
-  # end
+  def top_destinations
+    unique_dest = self.destinations.uniq
+    self.destinations.each
+  end
 
 end
