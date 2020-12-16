@@ -1,0 +1,7 @@
+<h1>Post Show Page</h1>
+
+<b>Title: </b><%= @post.name %><br/>
+<b>Content: </b><%= @post.content %><br/>
+<b>Blogger Name: </b><%= link_to @post.blogger.name, blogger_path(@post.blogger) %><br/>
+<b>Destination: </b><%= link_to @post.destination.name, destination_path(@post.destination) %><br/>
+<b>Likes: </b><%= @post.likes %><br/>

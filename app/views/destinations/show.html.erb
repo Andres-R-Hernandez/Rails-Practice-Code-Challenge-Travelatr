@@ -1,0 +1,10 @@
+<h1>Destination Show Page</h1>
+
+<b>Name: </b><%= @destination.name %><br/>
+<b>Country: </b><%= @destination.country %><br/>
+<b>Average Age of all Unique Bloggers: </b><%= @destination.blogger_avg_age %><br/>
+<b>Featured Post: </b><%= link_to @destination.featured_post.title, post_path(@destination.featured_post) %><br/>
+<b>5 Most Recent Posts Written About Destination:</b><br/>
+<% @destination.most_recent_posts.each do |post| %>
+  <%=post.id%>: <%= link_to post.title, post_path(post) %>
+<% end %>

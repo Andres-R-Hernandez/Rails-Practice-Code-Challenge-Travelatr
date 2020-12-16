@@ -1,0 +1,8 @@
+<h1>Blogger Show Page</h1>
+
+<b>Name: </b><%= @blogger.name %><br/>
+<b>Age: </b><%= @blogger.age %><br/>
+<b>Bio: </b><%= @blogger.bio %><br/>
+<b>Total Likes: </b><%= @blogger.total_likes %><br/>
+<b>Featured Post: </b><%= link_to @blogger.featured_post.title, post_path(@blogger.featured_post) %><br/>
+<b>Top 5 Most Written About Destinations:</b><br/>
